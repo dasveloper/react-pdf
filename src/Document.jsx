@@ -66,12 +66,15 @@ export default class Document extends PureComponent {
   linkService = new LinkService({ eventBus });
 
   componentDidMount() {
+    console.log('mount');
     this.loadDocument();
     this.setupLinkService();
   }
 
   componentDidUpdate(prevProps) {
     const { file } = this.props;
+    console.log(file, file !== prevProps.file);
+
     if (file !== prevProps.file) {
       this.loadDocument();
     }
