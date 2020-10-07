@@ -72,12 +72,7 @@ export default class Document extends PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    const { file } = this.props;
-    console.log(file, file !== prevProps.file);
-
-    if (file !== prevProps.file) {
-      this.loadDocument();
-    }
+ 
   }
 
   componentWillUnmount() {
