@@ -40,6 +40,7 @@ export class PageInternal extends PureComponent {
   }
 
   componentDidMount() {
+    console.log('page mount');
     const { pdf } = this.props;
 
     if (!pdf) {
